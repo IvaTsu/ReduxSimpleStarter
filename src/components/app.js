@@ -1,4 +1,7 @@
+// Modules & Dependencies IMPORTs
 import React from 'react';
+
+// Components IMPORTs
 import SearchBar from './SearchBar/SearchBar';
 
 export default () => (
