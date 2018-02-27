@@ -20,6 +20,10 @@ module.exports = {
             "allowChildren": false
         }],
         "no-underscore-dangle": ["error", { "allowAfterThis": true }],
-        "import/no-extraneous-dependencies": ["error", {"devDependencies": true, "optionalDependencies": false, "peerDependencies": false}]
+        "import/no-extraneous-dependencies": ["error", {"devDependencies": true, "optionalDependencies": false, "peerDependencies": false}],
+        "no-tabs": 0,
+        "indent": 0,
+        "react/jsx-indent": 0,
+        "no-mixed-spaces-and-tabs": 0
     }
 };
