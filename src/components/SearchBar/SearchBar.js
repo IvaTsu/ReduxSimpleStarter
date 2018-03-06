@@ -14,6 +14,7 @@ class SearchBar extends Component {
 				<input
   				type="text"
   				placeholder="Search ..."
+  				value={this.state.searchRequest}
   				onChange={event => this.setState({ searchRequest: event.target.value })}
 				/>
 				Input value: {this.state.searchRequest}
