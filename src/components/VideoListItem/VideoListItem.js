@@ -7,16 +7,23 @@ const VideoListItem = ({ video, onVideoSelected }) => {
 	const videoTitle = videoSnippet.title;
 
 	return (
-		<li className="list-group-item" onClick={() => onVideoSelected(video)}>
-			<div className="video-list media">
-				<div className="media-left">
-					<img className="media-object" src={imgURL} alt="Video thumbnail" />
+		<div
+  		onClick={() => onVideoSelected(video)}
+  		onKeyPress={() => onVideoSelected(video)}
+  		role="button"
+  		tabIndex="0"
+		>
+			<li className="list-group-item">
+				<div className="video-list media">
+					<div className="media-left">
+						<img className="media-object" src={imgURL} alt="Video thumbnail" />
+					</div>
+					<div className="media-body">
+						<h2 className="media-heading">{videoTitle}</h2>
+					</div>
 				</div>
-				<div className="media-body">
-					<h2 className="media-heading">{videoTitle}</h2>
-				</div>
-			</div>
-		</li>
+			</li>
+		</div>
 	);
 };
 
