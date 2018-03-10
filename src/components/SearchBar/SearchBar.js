@@ -1,4 +1,6 @@
+
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 // - RELATIVE INPUTs
 import styles from './styles';
@@ -11,6 +13,13 @@ class SearchBar extends Component {
 		};
 	}
 
+	onInputChange = (searchRequest) => {
+		this.setState({
+			searchRequest,
+		});
+		this.props.onSearchTermChange(searchRequest);
+	};
+
 	render() {
 		return (
 			<div style={styles.c_search_bar}>
@@ -19,11 +28,16 @@ class SearchBar extends Component {
   				type="text"
   				placeholder="Search ..."
   				value={this.state.searchRequest}
-  				onChange={event => this.setState({ searchRequest: event.target.value })}
+  				onChange={event => this.onInputChange(event.target.value)}
 				/>
 			</div>
 		);
 	}
 }
+
+SearchBar.propTypes = {
+	onSearchTermChange: PropTypes.func.isRequired,
+};
+
 
 export default SearchBar;
