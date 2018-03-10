@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const VideoListItem = ({ video }) => {
+const VideoListItem = ({ video, onVideoSelected }) => {
 	const videoSnippet = video.snippet;
 	const imgURL = videoSnippet.thumbnails.default.url;
 	const videoTitle = videoSnippet.title;
 
 	return (
-		<li className="list-group-item">
+		<li className="list-group-item" onClick={() => onVideoSelected(video)}>
 			<div className="video-list media">
 				<div className="media-left">
 					<img className="media-object" src={imgURL} alt="Video thumbnail" />
@@ -22,6 +22,7 @@ const VideoListItem = ({ video }) => {
 
 VideoListItem.propTypes = {
 	video: PropTypes.objectOf(PropTypes.any).isRequired,
+	onVideoSelected: PropTypes.func.isRequired,
 };
 
 export default VideoListItem;
