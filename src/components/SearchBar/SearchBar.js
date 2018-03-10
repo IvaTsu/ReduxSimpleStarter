@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 
+// - RELATIVE INPUTs
+import styles from './styles';
+
 class SearchBar extends Component {
 	constructor(props) {
 		super(props);
@@ -10,14 +13,14 @@ class SearchBar extends Component {
 
 	render() {
 		return (
-			<div>
+			<div style={styles.c_search_bar}>
 				<input
+  				style={styles.o_search_bar}
   				type="text"
   				placeholder="Search ..."
   				value={this.state.searchRequest}
   				onChange={event => this.setState({ searchRequest: event.target.value })}
 				/>
-				Input value: {this.state.searchRequest}
 			</div>
 		);
 	}

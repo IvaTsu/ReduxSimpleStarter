@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+// - RELATIVE IMPORTs
+import styles from './styles';
+
 const VideoDetails = ({ video }) => {
 	if (!video) {
 		return <div>Loading ...</div>;
@@ -17,7 +20,7 @@ const VideoDetails = ({ video }) => {
 			<div className="embed-responsive embed-responsive-16by9">
 				<iframe className="embed-responsive-item" src={videoURL} title={videoTitle} />
 			</div>
-			<div className="details">
+			<div style={styles.c_details}>
 				<div>{videoTitle}</div>
 				<div>{videoDescription}</div>
 			</div>
