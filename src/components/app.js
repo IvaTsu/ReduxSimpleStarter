@@ -1,6 +1,7 @@
 // Modules & Dependencies IMPORTs
 import React, { Component } from 'react';
 import YTSearch from 'youtube-api-search';
+import _ from 'lodash';
 
 // Components IMPORTs
 import SearchBar from './SearchBar/SearchBar';
@@ -28,9 +29,11 @@ class App extends Component {
 	}
 
 	render() {
+		const videoSearch = _.debounce((searchTerm) => { this.videoSearch(searchTerm); }, 500);
+
 		return (
 			<div>
-				<SearchBar onSearchTermChange={searchTerm => this.videoSearch(searchTerm)} />
+				<SearchBar onSearchTermChange={videoSearch} />
 				<VideoDetails video={this.state.selectedVideo} />
 				<VideoList
   				onVideoSelected={selectedVideo => this.setState({ selectedVideo })}

@@ -1,4 +1,4 @@
-
+// Modules & Dependencies IMPORTs
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
@@ -13,7 +13,7 @@ class SearchBar extends Component {
 		};
 	}
 
-	onInputChange = (searchRequest) => {
+	_onInputChange = (searchRequest) => {
 		this.setState({
 			searchRequest,
 		});
@@ -28,7 +28,7 @@ class SearchBar extends Component {
   				type="text"
   				placeholder="Search ..."
   				value={this.state.searchRequest}
-  				onChange={event => this.onInputChange(event.target.value)}
+  				onChange={event => this._onInputChange(event.target.value)}
 				/>
 			</div>
 		);
@@ -38,6 +38,5 @@ class SearchBar extends Component {
 SearchBar.propTypes = {
 	onSearchTermChange: PropTypes.func.isRequired,
 };
-
 
 export default SearchBar;
