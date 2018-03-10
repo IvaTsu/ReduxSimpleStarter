@@ -1,8 +1,6 @@
-// Modules & Dependencies IMPORTs
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-// - RELATIVE INPUTs
 import styles from './styles';
 
 class SearchBar extends Component {

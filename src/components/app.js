@@ -1,9 +1,7 @@
-// Modules & Dependencies IMPORTs
 import React, { Component } from 'react';
 import YTSearch from 'youtube-api-search';
 import _ from 'lodash';
 
-// Components IMPORTs
 import SearchBar from './SearchBar/SearchBar';
 import VideoList from './VideoList/VideoList';
 import VideoDetails from './VideoDetails/VideoDetails';

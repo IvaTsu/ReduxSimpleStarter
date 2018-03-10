@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// - RELATIVE IMPORTs
 import styles from './styles';
 
 const VideoDetails = ({ video }) => {

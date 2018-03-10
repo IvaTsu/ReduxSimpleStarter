@@ -1,8 +1,6 @@
-// Modules & Dependencies IMPORTs
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// RELATIVE IMPORTs
 import VideoListItem from './../VideoListItem/VideoListItem';
 
 const VideoList = ({ videos, onVideoSelected }) => {
